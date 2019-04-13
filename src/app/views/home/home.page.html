@@ -1,1 +1,8 @@
 home works
+
+<button (click)="update()">Update</button>
+
+<ul *ngIf="(all$ | async) as todos">
+    <li *ngFor="let todo of todos.items">{{todo.id}}</li>
+    <li *ngFor="let todo of extra">{{todo.id}}</li>
+</ul>
